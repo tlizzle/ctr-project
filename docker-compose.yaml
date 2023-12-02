@@ -1,0 +1,23 @@
+version: '3'
+services:
+  ml_api_layer_api:
+    # build:
+    #   context: .
+    #   dockerfile: ./Dockerfile
+    #   args:
+    #       CI_JOB_TOKEN: $CI_JOB_TOKEN
+    image: ctr_project:dev
+    network_mode: "host"
+    environment:
+      - timezone=Asia/Taipei
+      - TRAINING_THREADS=6
+      - TRAINING_THREADS=10
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      resources:
+        limits:
+          memory: 15gb    
+    # command: 
+    #   ["python3", "-m", "src.main"]
+

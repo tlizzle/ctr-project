@@ -1,0 +1,14 @@
+__pycache__/
+*.pkl
+*.log
+*.png
+*.pt
+.pytest_cache
+*.vscode
+*.pth
+*.metals
+
+raw_data/*
+
+run/*
+.python-version
